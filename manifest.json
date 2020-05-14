@@ -1,0 +1,10 @@
+{
+  "manifest_version": 2,
+  "name": "Youtube Discovery",
+  "version": "1.0",
+  "description": "An extension that let's you discover youtube video as you browse the web",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  }
+}
