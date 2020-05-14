@@ -1,8 +1,24 @@
-#youtube-discovery-video {
+#yt-main-wrapper {
   right: 20px;
   position: fixed;
   z-index: 99999;
   bottom: 20px;
+  background-color: black;
+  box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+}
+
+#yt-maxword {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 0;
+  padding: 10px 0;
+  color: white;
+}
+
+#youtube-discovery-video {
+  width: 100%;
+  height: auto;
   width: 420px;
-  height: 250px;
+  height: 225px;
 }

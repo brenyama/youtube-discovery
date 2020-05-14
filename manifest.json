@@ -7,7 +7,7 @@
     "activeTab",
     "declarativeContent",
     "storage",
-    "https://www.googleapis.com/"
+    "https://www.googleapis.com/*"
   ],
   "background": {
     "scripts": ["background.js"],
