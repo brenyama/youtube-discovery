@@ -1,8 +1,11 @@
-// create a variable html string to hold sample html data.
-let htmlString = document.documentElement.innerHTML;
+// Copyright 2018 The Chromium Authors. All rights reserved.
+// Use of this source code is governed by a BSD-style license that can be
+// found in the LICENSE file.
 
-alert('this is working!')
+'use strict';
 
-console.log("hello");
-
-// tests  
+chrome.runtime.onInstalled.addListener(function() {
+  chrome.storage.sync.set({color: '#3aa757'}, function() {
+    console.log("The color is green.");
+  });
+});

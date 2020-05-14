@@ -3,8 +3,20 @@
   "name": "Youtube Discovery",
   "version": "1.0",
   "description": "An extension that let's you discover youtube video as you browse the web",
+  "permissions": ["storage"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["./HtmlParser.js", "./main.js"]
+    }
+  ],
+  "icons": {
+    "16": "./assets/Yt-logo.png",
+    "48": "./assets/Yt-logo.png",
+    "128": "./assets/Yt-logo.png"
   }
 }
