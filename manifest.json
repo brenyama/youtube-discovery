@@ -3,10 +3,15 @@
   "name": "Youtube Discovery",
   "version": "1.0",
   "description": "An extension that let's you discover youtube video as you browse the web",
-  "permissions": ["storage"],
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "https://www.googleapis.com/"
+  ],
   "background": {
     "scripts": ["background.js"],
-    "persistent": false
+    "persistent": true
   },
   "content_scripts": [
     {
