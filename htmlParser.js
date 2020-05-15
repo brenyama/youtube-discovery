@@ -5,8 +5,15 @@ class HtmlParser {
   }
 
   parse(htmlString) {
+    // strip out any text between <script> or <style>
+    let stripped = htmlString.replace(/<style[^<]*<\/style>/mgsi, "");
+    // let stripped = htmlString.replace(/<style.*<\/style>/mgsi, "");
+    // stripped = htmlString.replace(/<script.*<\/script>/mgsi, "");
+
+    stripped = stripped.replace(/(<script[^<]*<\/script>)/mgsi, "");
+    console.log(stripped);
     // run regex to replace the html tags and anything inside the tags with empty string ///(<([^>]+)>)/ig
-    let stripped = htmlString.replace(/(<([^>]+)>)/gi, "");
+    stripped = stripped.replace(/(<([^>]+)>)/gi, "");
     // take the parsed string, remove anything not alphanumeric.
     stripped = stripped.replace(/[^a-z]/gi, " ");
     // take all letters and lowercase all characters so we can match words

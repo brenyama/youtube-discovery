@@ -4,16 +4,35 @@
   z-index: 99999;
   bottom: 20px;
   background-color: black;
-  box-shadow: 0 2px 5px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px 10px rgba(0, 0, 0, 0.1);
   border-radius: 15px;
+  transform: scale(0);
+}
+
+.active {
+  transform: scale(1) !important;
+  transition: transform 0.7s ease-in-out;
 }
 
 #yt-maxword {
-  font-size: 32px;
+  font-size: 28px;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 0;
   padding: 10px 0;
   color: white;
+  position: relative;
+}
+
+#yt-maxcount {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: rgb(42, 40, 40);
+  color: white;
+  font-size: 16px;
+  padding: 9px;
+  border-radius: 50%;
 }
 
 #youtube-discovery-video {
@@ -21,4 +40,5 @@
   height: auto;
   width: 420px;
   height: 225px;
+  border-radius: 15px;
 }
